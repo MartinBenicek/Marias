@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="top-page">
+        <span>
+            <a href="index.html""><img class="svg-picture" src='mariasfotky/svg/uvod.svg'/></a>
+            <a href="index.html">Úvod</a>
+        </span>
+        <span>
+            <a href="cards_counter.html""><img class="svg-picture" src='mariasfotky/svg/pocitadlo.svg'/></a>
+            <a href="cards_counter.html" class="current-page">Počítání karet</a>
+        </span>
+        <span>
+            <a href="price.html"><img class="svg-picture" src='mariasfotky/svg/penize.svg'/></a>
+            <a href="price.html">Vypočítání ceny</a>
+        </span>
+    </div>
+
+    <div class="all_cards">
+        <button id="rbutton" onclick="reset()">Reset</button>
+        <span>
+            <button class="choose-color"></button>
+            <button class="choose-color"></button>
+            <button class="choose-color"></button>
+        </span>
+        <div id="srdce">
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/sedma_srdce.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/osma_srdce.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/devet_srdce.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/spodek_srdce.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/vrsek_srdce.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/kral_srdce.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/x_srdce.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/eso_srdce.PNG"></button>
+        </div>
+    
+        <div id="kule">
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/sedma_kule.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/osma_kule.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/devet_kule.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/spodek_kule.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/vrsek_kule.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/kral_kule.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/x_kule.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/eso_kule.PNG"></button>
+        </div>
+    
+        <div id="listy">
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/sedma_listy.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/osma_listy.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/devet_listy.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/spodek_listy.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/vrsek_listy.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/kral_listy.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/x_listy.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/eso_listy.PNG"></button>
+        </div>
+        
+        <div id="krize">
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/sedma_krize.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/osma_krize.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/devet_krize.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/spodek_krize.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/vrsek_krize.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/kral_krize.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/x_krize.PNG"></button>
+            <button class="card" onclick="change(this)" data-cond="false"><img src="mariasfotky/karty/eso_krize.PNG"></button>
+        </div>
+    </div>
+    
+    <div id="bottom-page"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
