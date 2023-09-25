@@ -41,7 +41,7 @@ body{
 
 #footer, #bottom-page{
     margin-top: 30px;
-    background-color: #a1df2ec5;
+    background-color: rgba(228, 213, 1, 0.932);
     height: 110px;
     width:100%;
 }
@@ -126,8 +126,6 @@ body{
     box-shadow: 0px 0px 10px 10px rgba(228, 213, 1, 0.932);
 }
 
-
-
 #srdce, #kule, #listy, #krize{
     text-align: center;
     margin: 0 auto;
@@ -135,93 +133,32 @@ body{
     width: auto;
 }
 
+
+/* price */
+
+
+#cena, #typ-hry, #typ-hry-chceck{
+align-items: center;
+margin-top: 15px;
+display: flex;
+flex-direction: column;
+}
+
 #cena{
-    margin-top: 1%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+align-items: center;
+margin-top: 15px;
 }
 
-#changer, #flek, #status{
-    margin: 3px;
+.game-mode{
+height: 40px;
+width: 80px;
+border-radius: 10px;
+margin-top: 5px;
+margin-bottom: 5px;
+background-color: rgba(228, 213, 1, 0.548);;
 }
 
-.cenabutton{
-    border-radius: 50px;
-    height: 50px;
-    width: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    border: rgb(248, 10, 10) solid;
-    background-color: rgba(255, 0, 43, 0.459);
-    transition-duration: 0.15s;
- }
-
- .cenabutton:hover{
-    background-color: rgb(248, 10, 10);
- }
-
-#Typ, #Fleky{
-    border-radius: 10px;
-    height: 40px;
-    width: 200px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    border: rgb(248, 10, 10) solid;
-    background-color: rgba(255, 0, 43, 0.459);
-    margin: 5px;
-}
-
-.slider-container{
-    position: relative;
-    overflow: hidden;
-}
-
-.slider-container-slide{
-    transition: transform 0.5s ease-in-out;
-}
-
-
-.toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
-  
-
-.slider{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: gray;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.slider:before {
-    content: "";
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-color: rgba(255, 255, 255, 0.205);
-    border-radius: 50%;
-    left: 2px;
-    bottom: 2px;
-    transition: 0.4s;
-}
-  
-input[type="checkbox"]:checked + .slider {
-    background-color: #66bb6a;
-}
-  
-input[type="checkbox"]:checked + .slider:before {
-    transform: translateX(30px);
+#idk{
+    display: flex;
+    flex-direction: row;
 }
