@@ -92,28 +92,6 @@ body{
     background-color: rgba(187, 174, 0, 0.932);;
 }
 
-.choose-color{
-    height: 40px;
-    width: 40px;
-    margin-bottom: 15px;
-}
-
-.choose-color:focus{
-    background: red;
-}
-
-.choose-color:nth-child(1){
-    background-color: red;
-}
-
-.choose-color:nth-child(2){
-    background-color: aqua;
-}
-
-.choose-color:nth-child(3){
-    background-color: gray;
-}
-
 .card{
     margin: 5px;
     margin-left: 10px;
@@ -137,28 +115,45 @@ body{
 /* price */
 
 
-#cena, #typ-hry, #typ-hry-chceck{
-align-items: center;
-margin-top: 15px;
-display: flex;
-flex-direction: column;
+#cena{
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 #cena{
-align-items: center;
-margin-top: 15px;
+    align-items: center;
+    margin-top: 15px;
 }
 
 .game-mode{
-height: 40px;
-width: 80px;
-border-radius: 10px;
-margin-top: 5px;
-margin-bottom: 5px;
-background-color: rgba(228, 213, 1, 0.548);;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(228, 213, 1, 0.932);
 }
 
-#idk{
+.game-choice{
+    height: 30px;
+    width: 30px;
+    margin: auto;
+}
+
+.calculate{
+    margin-top: 20px;
+}
+
+#main-volba{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+}
+
+.typ-hry{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
 }

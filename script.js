@@ -1,29 +1,3 @@
-class all_in_one{
-    typHry(counter) {
-        const show = document.getElementById("Typ");
-
-        if (counter > 0){
-            show.value = typ[counter];
-        } else if (counter < 0){
-            show.value = typ[typ.length + counter];
-        } else {
-            show.value = typ[counter];
-        }
-    }
-
-    typFleku(counter){
-        const show = document.getElementById("Fleky");
-
-        if (counter > 0){
-            show.value = flek[counter];
-        } else if (counter < 0){
-            show.value = flek[flek.length + counter];
-        } else {
-            show.value = flek[counter];
-        }
-    }
-}
-
 //card color change
 
 function change(button) {
@@ -49,65 +23,25 @@ function reset(){
     }
 }
 
-
-function choice(button){
-    let info;
-
-    if (button.dataset.type === "first"){
-        info = document.getElementById("Typ");
-    } else if (button.dataset.type === "second"){
-        info = document.getElementById("Fleky");
-    }
-    return info
-}
-
-function front(button){
-    let info = choice(button);
-    
-    let counter = parseInt(info.dataset.counter, 10);
-    let countermax = parseInt(info.dataset.countermax, 10);
-
-    if (counter < countermax){
-        counter++;
+function select(button){
+    if(button.dataset.selected == "false"){
+        button.style.backgroundColor = "rgb(0, 255, 0)";
+        button.dataset.selected = "true";
     } else {
-        counter = 0;
+        button.style.backgroundColor = "rgba(228, 213, 1, 0.932)";
+        button.dataset.selected = "false";
     }
 
-    if (info.id === "Typ"){
-        Hra.typHry(counter)
-    } else if(info.id === "Fleky"){
-        Hra.typFleku(counter)
-    }
-    
-    
-    info.dataset.counter = counter.toString();
-}
+    const typeHry = document.getElementsByClassName("game-mode");
 
-function previous(button){
-    let info = choice(button);
-    
-    let counter = parseInt(info.dataset.counter, 10);
-    let countermax = parseInt(info.dataset.countermax, 10);
-
-    if (counter > -countermax){
-        counter--;
-    } else {
-        counter = 0;
+    if (typeHry[3].dataset.selected === "true"){
+        typeHry[0].style.backgroundColor = "rgba(228, 213, 1, 0.932)";
+        typeHry[0].dataset.selected = "false";
     }
-    
-    if (info.id === "Typ"){
-        Hra.typHry(counter)
-    } else if(info.id === "Fleky"){
-        Hra.typFleku(counter)
-    }
-    
-    info.dataset.counter = counter.toString();
 }
 
 function calculate(){
     
 }
 
-const typ = ["Hra", "Sedma", "Stovka", "StoSedum", "Betl", "Durch"];
 const flek = ["Dobré", "Flek", "Re", "Tutti", "Boty", "Kalhoty", "Keiser", "Lepší", "Lepší x2"];
-let Hra = new all_in_one();
