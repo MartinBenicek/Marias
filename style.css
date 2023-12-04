@@ -30,7 +30,7 @@ body{
 }
 
 .current-page{
-    text-decoration: underline;
+    text-decoration: underline!important;
 }
 
 .svg-picture{
@@ -134,11 +134,17 @@ body{
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: rgba(228, 213, 1, 0.932);
+    font-family: 'Karla', sans-serif;
+}
+
+.game-mode[data-selected="true"]{
+    background-color: rgba(22, 230, 33, 0.932);
 }
 
 .game-choice{
     height: 30px;
     width: 30px;
+    cursor: pointer;
     margin: auto;
 }
 

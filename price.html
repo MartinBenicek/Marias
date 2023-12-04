@@ -10,8 +10,8 @@
 <body>
     <div id="top-page">
         <span>
-            <a href="index.html""><img class="svg-picture" src='mariasfotky/svg/uvod.svg'/></a>
-            <a href="index.html">Úvod</a>
+            <a href="main.html""><img class="svg-picture" src='mariasfotky/svg/uvod.svg'/></a>
+            <a href="main.html">Úvod</a>
         </span>
         <span>
             <a href="cards_counter.html""><img class="svg-picture" src='mariasfotky/svg/pocitadlo.svg'/></a>
@@ -26,27 +26,27 @@
     <div id="cena">
         <div id="main-volba">
             <div class="typ-hry">
-                <button class="game-mode" onclick="select(this)" data-selected="false">Hra</button>
+                <button class="game-mode" id="Hra" data-selected="false">Hra</button>
                 <input type="checkbox" class="game-choice">
             </div>
             <div class="typ-hry">
-                <button class="game-mode" onclick="select(this)" data-selected="false">Sedma</button>
+                <button class="game-mode" id="Sedma" data-selected="false">Sedma</button>
                 <input type="checkbox" class="game-choice">
             </div>
             <div class="typ-hry">
-                <button class="game-mode" onclick="select(this)" data-selected="false">Kilo</button>
+                <button class="game-mode" id="Kilo" data-selected="false">Kilo</button>
                 <input type="checkbox" class="game-choice">
             </div>
             <div class="typ-hry">
-                <button class="game-mode" onclick="select(this)" data-selected="false">Betl</button>
+                <button class="game-mode" id="Betl" data-selected="false">Betl</button>
                 <input type="checkbox" class="game-choice">
             </div>
             <div class="typ-hry">
-                <button class="game-mode" onclick="select(this)" data-selected="false">Durch</button>
+                <button class="game-mode" id="Durch" data-selected="false">Durch</button>
                 <input type="checkbox" class="game-choice">
             </div>
             <div class="typ-hry">
-                <button class="game-mode" onclick="select(this)" data-selected="false">V Srdcích</button>
+                <button class="game-mode" id="V-srdcich" data-selected="false">V Srdcích</button>
                 <input type="checkbox" class="game-choice">
             </div>
         </div>
@@ -57,6 +57,6 @@
     </div>
 
     <div id="footer"></div>
-    <script src="script.js"></script>
+    <script src="price.js"></script>
 </body>
 </html>
