@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="top-page">
@@ -22,41 +22,114 @@
             <a href="price.html" class="current-page">Vypočítání ceny</a>
         </span>
     </div>
-
-    <div id="cena">
-        <div id="main-volba">
-            <div class="typ-hry">
-                <button class="game-mode" id="Hra" data-selected="false">Hra</button>
-                <input type="checkbox" class="game-choice">
+    <div id="cena-keeper">
+        <div id="cena">
+            <div id="nazvy">
+                <p>Odkaz na disk</p>
+                <p>Typ</p>
+                <p>Hlášená</p>
+                <p>Fleknuto</p>       
+                <span class="hold-together">
+                    <p>Uhrál</p>
+                    <p>Povinnost/obrana</p>
+                </span>
             </div>
-            <div class="typ-hry">
-                <button class="game-mode" id="Sedma" data-selected="false">Sedma</button>
-                <input type="checkbox" class="game-choice">
+            <input type="text" id="drive">
+            <div id="Hra-div">
+                <button class="game-mode-button" id="Hra" data-selected="false">Hra</button>
+                <div id="Hra-div-functions">
+                    <input type="text" class="game-flek-input">
+                    <div class="hold-checkbox">
+                        <span class="game-check-span">
+                            <input type="checkbox" id="povinnost-Hra">
+                            <label for="povinnost-Hra"></label>
+                        </span>
+                        <span class="game-check-span">
+                            <input type="checkbox" id="obrana-hra">
+                            <label for="obrana-hra"></label>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="typ-hry">
-                <button class="game-mode" id="Kilo" data-selected="false">Kilo</button>
-                <input type="checkbox" class="game-choice">
+            <div id="Sedma-div">
+                <button class="game-mode-button" id="Sedma" data-selected="false">Sedma</button>
+                <div id="Sedma-div-functions">
+                    <span class="game-check-span">
+                        <input type="checkbox" class="game-hlasena-box" id="hlasena-sedma">
+                        <label for="hlasena-sedma"></label>
+                    </span>
+                    <input type="text" class="game-flek-input">
+                    <div class="hold-checkbox">
+                        <span class="game-check-span">
+                            <input type="checkbox" id="povinnost-Sedma">
+                            <label for="povinnost-Sedma"></label>
+                        </span>
+                        <span class="game-check-span">
+                            <input type="checkbox" id="obrana-Sedma">
+                            <label for="obrana-Sedma"></label>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="typ-hry">
-                <button class="game-mode" id="Betl" data-selected="false">Betl</button>
-                <input type="checkbox" class="game-choice">
+            <div id="Kilo-div">
+                <button class="game-mode-button" id="Kilo" data-selected="false">Kilo</button>
+                <div id="Kilo-div-functions">
+                    <span class="game-check-span">
+                        <input type="checkbox" class="game-hlasena-box" id="hlasene-kilo">
+                        <label for="hlasene-kilo"></label>
+                    </span>
+                    <input type="text" class="game-flek-input">
+                    <div class="hold-checkbox">
+                        <span class="game-check-span">
+                            <input type="checkbox" id="povinnost-Kilo">
+                            <label for="povinnost-Kilo"></label>
+                        </span>
+                        <span class="game-check-span">
+                            <input type="checkbox" id="obrana-Kilo">
+                            <label for="obrana-Kilo"></label>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="typ-hry">
-                <button class="game-mode" id="Durch" data-selected="false">Durch</button>
-                <input type="checkbox" class="game-choice">
+            <div id="Betl-div">
+                <button class="game-mode-button" id="Betl" data-selected="false">Betl</button>
+                <div id="Betl-div-functions">
+                    <input type="text" class="game-flek-input">
+                    <div class="hold-checkbox">
+                        <span class="game-check-span">
+                            <input type="checkbox" id="povinnost-Betl">
+                            <label for="povinnost-Betl"></label>
+                        </span>
+                        <span class="game-check-span">
+                            <input type="checkbox" id="obrana-Betl">
+                            <label for="obrana-Betl"></label>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="typ-hry">
-                <button class="game-mode" id="V-srdcich" data-selected="false">V Srdcích</button>
-                <input type="checkbox" class="game-choice">
+            <div id="Durch-div">
+                <button class="game-mode-button" id="Durch" data-selected="false">Durch</button>
+                <div id="Durch-div-functions">
+                    <input type="text" class="game-flek-input">
+                    <div class="hold-checkbox">
+                        <span class="game-check-span">
+                            <input type="checkbox" id="povinnost-Durch">
+                            <label for="povinnost-Durch"></label>
+                        </span>
+                        <span class="game-check-span">
+                            <input type="checkbox" id="obrana-Durch">
+                            <label for="obrana-Durch"></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="V-srdcich-div">
+                <button class="game-mode-button" id="V-srdcich" data-selected="false">V Srdcích</button>
             </div>
         </div>
-
-        <div id="calculate">
-            <button class="calculate" onclick="calculate()">Vypočítat</button>
-        </div>
+        <button id="calculate" onclick="calculate()">Vypočítat</button>
     </div>
-
-    <div id="footer"></div>
+    <footer>s</footer>
     <script src="price.js"></script>
 </body>
 </html>

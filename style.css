@@ -1,9 +1,16 @@
+html{
+    height: 100%;
+}
+
 body{
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 100%;
-    font-family: 'Karla', sans-serif;
+    min-height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #333333;
+    color: white;
+    position: relative;
 }
 
 
@@ -11,7 +18,7 @@ body{
 
 
 #top-page{
-    background-color: rgba(228, 213, 1, 0.932);
+    background-color: #797979;
     display: flex;
     padding: 40px;
     justify-content: space-evenly;
@@ -20,8 +27,9 @@ body{
 #top-page a{
     text-decoration: none;
     color: black;
-    font-family: 'Karla', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
+    font-weight: normal;
 }
 
 #top-page span{
@@ -39,18 +47,14 @@ body{
     margin-right: 5px;
 }
 
-#footer, #bottom-page{
-    margin-top: 30px;
-    background-color: rgba(228, 213, 1, 0.932);
+footer {
+    background-color: #797979;
+    color: #fff;
     height: 110px;
-    width:100%;
+    position: sticky;
+    top: 100%;
+    margin-top: 5vh;
 }
-
-#footer{
-    position: absolute;
-    bottom: 0;
-}
-
 
 /* Ůvod */
 
@@ -77,19 +81,18 @@ body{
 }
 
 #rbutton{
-    width: 70px;
-    font-family: 'Karla', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 15px;
     font-size: 18px;
     border-radius: 30px;
     height: 50px;
     width: 150px;
-    background-color: rgba(228, 213, 1, 0.932);
+    background-color: #797979;
     transition-duration: 150ms;
 }
 
 #rbutton:hover{
-    background-color: rgba(187, 174, 0, 0.932);;
+    background-color: #E8E8E8;
 }
 
 .card{
@@ -101,7 +104,7 @@ body{
 }
 
 .card:hover{
-    box-shadow: 0px 0px 10px 10px rgba(228, 213, 1, 0.932);
+    box-shadow: 0px 0px 10px 10px #797979;
 }
 
 #srdce, #kule, #listy, #krize{
@@ -115,51 +118,203 @@ body{
 /* price */
 
 
-#cena{
-    align-items: center;
-    margin-top: 15px;
+#cena-keeper{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #cena{
+    display: grid;
+    grid-template-rows: repeat(5, 40px);
+    grid-template-columns: 140px 90px 90px 90px 90px 90px 90px;
+    justify-items: center;
     align-items: center;
-    margin-top: 15px;
+    gap: 40px 0;
 }
 
-.game-mode{
+#nazvy{
+    grid-row: 1 / 6;
+    grid-column: 1;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, 40px);
+    align-items: center;
+    gap: 40px;
+}
+
+#nazvy p{
+    margin: 0;
+    margin-top: 5px;
+}
+
+#drive{
+    display: flex;
+    grid-area: 1 / 2 / 1 / 8;
+    height: 30px;
+    width: calc(100% - 10px);
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    background-color: #797979;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+#Hra-div, #Sedma-div, #Kilo-div, #Betl-div, #Durch-div, #V-srdcich-div {
+    grid-row: 2 / 6;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 40px);
+    gap: 40px;
+    justify-items: center;
+}
+  
+#Hra, #Sedma, #Kilo, #Betl, #Durch, #V-srdcich{
+    grid-row: 1;
+    grid-column: 1;
+}
+  
+#Hra-div-functions, #Sedma-div-functions, #Kilo-div-functions, 
+#Betl-div-functions, #Durch-div-functions, #V-srdcich-div-functions {
+    display: grid;
+    grid-column: 1;
+    height: 100%;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    justify-items: center;
+}
+
+#Hra-div{
+    grid-column: 2;
+}
+
+#Sedma-div{
+    grid-column: 3;
+}
+
+#Kilo-div{
+    grid-column: 4;
+}
+
+#Betl-div{
+    grid-column: 5;
+}
+
+#Durch-div{
+    grid-column: 6;
+}
+
+#V-srdcich-div{
+    grid-column: 7;
+}
+
+#Hra-div-functions, #Betl-div-functions, #Durch-div-functions, #V-srdcich-div-functions{
+    grid-row: 3 / 5;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#Sedma-div-functions, #Kilo-div-functions{
+    grid-row: 2 / 5;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.hold-together p{
+    margin: 0;
+}
+
+.hold-together p:last-child{
+    font-size: 10px;
+    margin-top: 5px!important;
+}
+
+.game-mode-button{
     height: 40px;
     width: 80px;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: rgba(228, 213, 1, 0.932);
-    font-family: 'Karla', sans-serif;
+    border-radius: 5px;
+    color: white;
+    background-color: #797979;
+    font-family: 'Inter', sans-serif;
 }
 
-.game-mode[data-selected="true"]{
-    background-color: rgba(22, 230, 33, 0.932);
+.game-mode-button[data-selected="true"]{
+    background-color: #E8E8E8;
+    color: #000;
 }
 
-.game-choice{
+.game-hlasena-box{
     height: 30px;
     width: 30px;
     cursor: pointer;
     margin: auto;
 }
 
-.calculate{
+.game-flek-input{
+    height: 25px;
+    width: 50px;
+    border-radius: 5px;
+    color: white;
+    background-color: #797979;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.hold-checkbox{
+    display: flex;
+    width: 100%;
+}
+
+.game-check-span{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+}
+
+.game-check-span label{
+    cursor: pointer;
+    display: flex;
+}
+
+.game-check-span input[type="checkbox"]{
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.game-check-span label::before{
+    content: '';
+    border: 1px solid black;
+    background-color: #797979;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.game-check-span label:hover::before, .game-check-span input[type="checkbox"]:hover + label::before{
+    background-color: #a4d473;
+}
+
+.game-check-span input[type="checkbox"]:checked +  label::before{
+    background-color: #7EE31A;
+}
+
+#calculate{
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    width: 120px;
+    height: 40px;
+    background-color: #797979;
+    color: #FFF;
     margin-top: 20px;
 }
 
-#main-volba{
-    display: flex;
-    justify-content: space-between;
-}
-
-.typ-hry{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-    margin-right: 5px;
+#calculate:hover{
+    background-color: #E8E8E8;
+    color: #000;
 }
