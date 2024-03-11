@@ -38,15 +38,15 @@
             <div id="Hra-div">
                 <button class="game-mode-button" id="Hra" data-selected="false">Hra</button>
                 <div id="Hra-div-functions">
-                    <input type="text" class="game-flek-input">
+                    <input type="number" id="Hra-flek" class="game-flek-input">
                     <div class="hold-checkbox">
                         <span class="game-check-span">
                             <input type="checkbox" id="povinnost-Hra">
                             <label for="povinnost-Hra"></label>
                         </span>
                         <span class="game-check-span">
-                            <input type="checkbox" id="obrana-hra">
-                            <label for="obrana-hra"></label>
+                            <input type="checkbox" id="obrana-Hra">
+                            <label for="obrana-Hra"></label>
                         </span>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                         <input type="checkbox" class="game-hlasena-box" id="hlasena-sedma">
                         <label for="hlasena-sedma"></label>
                     </span>
-                    <input type="text" class="game-flek-input">
+                    <input type="number" id="Sedma-flek" class="game-flek-input">
                     <div class="hold-checkbox">
                         <span class="game-check-span">
                             <input type="checkbox" id="povinnost-Sedma">
@@ -78,7 +78,7 @@
                         <input type="checkbox" class="game-hlasena-box" id="hlasene-kilo">
                         <label for="hlasene-kilo"></label>
                     </span>
-                    <input type="text" class="game-flek-input">
+                    <input type="number" id="Kilo-flek" class="game-flek-input">
                     <div class="hold-checkbox">
                         <span class="game-check-span">
                             <input type="checkbox" id="povinnost-Kilo">
@@ -94,7 +94,7 @@
             <div id="Betl-div">
                 <button class="game-mode-button" id="Betl" data-selected="false">Betl</button>
                 <div id="Betl-div-functions">
-                    <input type="text" class="game-flek-input">
+                    <input type="number" id="Betl-flek" class="game-flek-input">
                     <div class="hold-checkbox">
                         <span class="game-check-span">
                             <input type="checkbox" id="povinnost-Betl">
@@ -110,7 +110,7 @@
             <div id="Durch-div">
                 <button class="game-mode-button" id="Durch" data-selected="false">Durch</button>
                 <div id="Durch-div-functions">
-                    <input type="text" class="game-flek-input">
+                    <input type="number" id="Durch-flek" class="game-flek-input">
                     <div class="hold-checkbox">
                         <span class="game-check-span">
                             <input type="checkbox" id="povinnost-Durch">
@@ -129,7 +129,7 @@
         </div>
         <button id="calculate" onclick="calculate()">Vypočítat</button>
     </div>
-    <footer>s</footer>
+    <footer></footer>
     <script src="price.js"></script>
 </body>
 </html>

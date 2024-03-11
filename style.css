@@ -26,10 +26,9 @@ body{
 
 #top-page a{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: 'Inter', sans-serif;
     font-size: 20px;
-    font-weight: normal;
 }
 
 #top-page span{
@@ -116,6 +115,12 @@ footer {
 
 
 /* price */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 
 #cena-keeper{
