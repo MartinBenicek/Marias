@@ -10,26 +10,48 @@ class changeColor {
     constructor(button, buttonToTurnOff = []) {
         this.button = button;
         this.buttonToTurnOff = buttonToTurnOff;
+        this.init();
+    }
+
+    init(){
         this.toggleColor();
-        this.showFunctions();
     }
 
     toggleColor() {
         this.button.addEventListener("click", () => {
             this.buttonToTurnOff.forEach(btn => {
                 btn.setAttribute("data-selected", "false");
+                if(btn.id !== "V-srdcich")
+                this.showFunctions(btn, 0);
             });
             let getAttribute = this.button.getAttribute("data-selected");
             getAttribute = getAttribute === "true";
             getAttribute = !getAttribute;
             this.button.setAttribute("data-selected", getAttribute.toString());
+            if(this.button.id === "V-srdcich"){
+                return;
+            }
+            this.setZeroToFlek(this.button);
+            if(getAttribute === true)
+            this.showFunctions(this.button, 1);
+            else
+            this.showFunctions(this.button, 0);
         });
     }
 
-    showFunctions(){
-        const hraDivFunc = document.getElementById("Hra-div-functions");
-        if (this.button == hraButton){
-        }
+    setZeroToFlek(button){
+        const buttonId = button.id + "-flek";
+        const buttonFlek = document.getElementById(buttonId);
+        buttonFlek.value = 0;
+    }
+
+    showFunctions(button, state){
+        const buttonId = button.id + "-div-functions";
+        const buttonDiv = document.getElementById(buttonId);
+        if(state === 1) 
+        buttonDiv.style.display = "grid";
+        else
+        buttonDiv.style.display = "none";
     }
 }
 

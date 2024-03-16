@@ -186,7 +186,7 @@ input::-webkit-inner-spin-button {
   
 #Hra-div-functions, #Sedma-div-functions, #Kilo-div-functions, 
 #Betl-div-functions, #Durch-div-functions, #V-srdcich-div-functions {
-    display: grid;
+    display: none;
     grid-column: 1;
     height: 100%;
     gap: 40px;
