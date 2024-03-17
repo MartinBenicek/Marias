@@ -4,6 +4,16 @@ const kiloButton = document.getElementById("Kilo");
 const betlButton = document.getElementById("Betl");
 const durchButton = document.getElementById("Durch");
 const vSrdcichButton = document.getElementById("V-srdcich");
+const povinnostHra = document.querySelector("#povinnost-Hra");
+const povinnostSedma = document.querySelector("#povinnost-Sedma");
+const povinnostKilo = document.querySelector("#povinnost-Kilo");
+const povinnostBetl = document.querySelector("#povinnost-Betl");
+const povinnostDurch = document.querySelector("#povinnost-Durch");
+const obranaHra = document.querySelector("#obrana-Hra");
+const obranaSedma = document.querySelector("#obrana-Sedma");
+const obranaKilo = document.querySelector("#obrana-Kilo");
+const obranaBetl = document.querySelector("#obrana-Betl");
+const obranaDurch = document.querySelector("#obrana-Durch");
 
 
 class changeColor {
@@ -33,12 +43,40 @@ class changeColor {
     }
 }
 
+class swapCheckbox{
+    constructor(checkboxPair = []){
+        this.checkboxPair = checkboxPair;
+        this.init()
+    }
+
+    init(){
+        this.checkboxPair.forEach(checkbox => {
+            checkbox.addEventListener("click", () => {
+                this.handleCheckboxChange(checkbox);
+            });
+        });
+    }
+
+    handleCheckboxChange(checkedCheckbox) {
+        this.checkboxPair.forEach(checkbox => {
+            if (checkbox !== checkedCheckbox && checkbox.checked) {
+                checkbox.checked = false;
+            }
+        });
+    }
+}
+
 const hraButtonColorChange = new changeColor(hraButton, [betlButton, durchButton]);
 const sedmaButtonColorChange = new changeColor(sedmaButton, [betlButton, durchButton]);
 const kiloButtonColorChange = new changeColor(kiloButton, [betlButton, durchButton]);
 const betlButtonColorChange = new changeColor(betlButton, [hraButton, sedmaButton, kiloButton, durchButton, vSrdcichButton]);
 const durchButtonColorChange = new changeColor(durchButton, [hraButton, sedmaButton, kiloButton, betlButton, vSrdcichButton]);
 const vSrdcichButtonColorChange = new changeColor(vSrdcichButton, [betlButton, durchButton]);
+const uhralHra = new swapCheckbox([povinnostHra, obranaHra]);
+const uhralSedma = new swapCheckbox([povinnostSedma, obranaSedma]);
+const uhralKilo = new swapCheckbox([povinnostKilo, obranaKilo]);
+const uhralBetl = new swapCheckbox([povinnostBetl, obranaBetl]);
+const uhralDurch = new swapCheckbox([povinnostDurch, obranaDurch]);
 
 function getData(){
     const hraFlekData = document.querySelector("#Hra-flek");
@@ -48,25 +86,16 @@ function getData(){
     const durchFlekData = document.querySelector("#Durch-flek");
     const hlasenaSedma = document.querySelector("#hlasena-sedma");
     const hlaseneKilo = document.querySelector("#hlasene-kilo");
-    const povinnostHra = document.querySelector("#povinnost-Hra").checked;
-    const povinnostSedma = document.querySelector("#povinnost-Sedma").checked;
-    const povinnostKilo = document.querySelector("#povinnost-Kilo").checked;
-    const povinnostBetl = document.querySelector("#povinnost-Betl").checked;
-    const povinnostDurch = document.querySelector("#povinnost-Durch").checked;
-    const obranaHra = document.querySelector("#obrana-Hra").checked;
-    const obranaSedma = document.querySelector("#obrana-Sedma").checked;
-    const obranaKilo = document.querySelector("#obrana-Kilo").checked;
-    const obranaBetl = document.querySelector("#obrana-Betl").checked;
-    const obranaDurch = document.querySelector("#obrana-Durch").checked;
+
 
     let gameArray = [
-    {buttonData: hraButton, flekData: hraFlekData, statusInfo: null, flekInfo: null, winner: [povinnostHra, obranaHra], price: 1}, 
+    {buttonData: hraButton, flekData: hraFlekData, statusInfo: null, flekInfo: null, winner: [povinnostHra.checked, obranaHra.checked], price: 1}, 
     {buttonData: sedmaButton, flekData: sedmaFlekData, hlasenaData: hlasenaSedma,
-        statusInfo: null, flekInfo: null, hlasenaInfo: null, winner: [povinnostSedma, obranaSedma], price: 2}, 
+        statusInfo: null, flekInfo: null, hlasenaInfo: null, winner: [povinnostSedma.checked, obranaSedma.checked], price: 2}, 
     {buttonData: kiloButton, flekData: kiloFlekData, hlasenaData: hlaseneKilo,
-        statusInfo: null, flekInfo: null, hlasenaInfo: null, winner: [povinnostKilo, obranaKilo], price: 2}, 
-    {buttonData: betlButton, flekData: betlFlekData, statusInfo: null, flekInfo: null, winner: [povinnostBetl, obranaBetl], price: 5}, 
-    {buttonData: durchButton, flekData: durchFlekData, statusInfo: null, flekInfo: null, winner: [povinnostDurch, obranaDurch], price: 10}, 
+        statusInfo: null, flekInfo: null, hlasenaInfo: null, winner: [povinnostKilo.checked, obranaKilo.checked], price: 2}, 
+    {buttonData: betlButton, flekData: betlFlekData, statusInfo: null, flekInfo: null, winner: [povinnostBetl.checked, obranaBetl.checked], price: 5}, 
+    {buttonData: durchButton, flekData: durchFlekData, statusInfo: null, flekInfo: null, winner: [povinnostDurch.checked, obranaDurch.checked], price: 10}, 
     {buttonData: vSrdcichButton, statusInfo: null}
     ];
 

@@ -1,3 +1,14 @@
+:root{
+    --black: #000;
+    --light-gray: #797979;
+    --dark-gray: #333333;
+    --white: #fff;
+    --light-red: #FF341C;
+    --light-green: #7EE31A;
+    --light-green-hover: #a4d473;
+    --darker-white: #E8E8E8;
+}
+
 html{
     height: 100%;
 }
@@ -8,8 +19,8 @@ body{
     width: 100%;
     min-height: 100%;
     font-family: 'Inter', sans-serif;
-    background-color: #333333;
-    color: white;
+    background-color: var(--dark-gray);
+    color: var(--white);
     position: relative;
 }
 
@@ -18,7 +29,7 @@ body{
 
 
 #top-page{
-    background-color: #797979;
+    background-color: var(--light-gray);
     display: flex;
     padding: 40px;
     justify-content: space-evenly;
@@ -26,7 +37,7 @@ body{
 
 #top-page a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-family: 'Inter', sans-serif;
     font-size: 20px;
 }
@@ -47,8 +58,8 @@ body{
 }
 
 footer {
-    background-color: #797979;
-    color: #fff;
+    background-color: var(--light-gray);
+    color: var(--white);
     height: 110px;
     position: sticky;
     top: 100%;
@@ -86,12 +97,12 @@ footer {
     border-radius: 30px;
     height: 50px;
     width: 150px;
-    background-color: #797979;
+    background-color: var(--light-gray);
     transition-duration: 150ms;
 }
 
 #rbutton:hover{
-    background-color: #E8E8E8;
+    background-color: var(--darker-white);
 }
 
 .card{
@@ -103,7 +114,7 @@ footer {
 }
 
 .card:hover{
-    box-shadow: 0px 0px 10px 10px #797979;
+    box-shadow: 0px 0px 10px 10px var(--light-gray);
 }
 
 #srdce, #kule, #listy, #krize{
@@ -152,7 +163,6 @@ input::-webkit-inner-spin-button {
 
 #nazvy p{
     margin: 0;
-    margin-top: 5px;
 }
 
 #drive{
@@ -163,11 +173,12 @@ input::-webkit-inner-spin-button {
     margin: 0;
     padding: 0;
     border-radius: 5px;
-    background-color: #797979;
-    color: #FFF;
+    background-color: var(--light-gray);
+    color: var(--white);
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     justify-content: center;
+    border: var(--black) 1px solid;
 }
 
 #Hra-div, #Sedma-div, #Kilo-div, #Betl-div, #Durch-div, #V-srdcich-div {
@@ -235,7 +246,6 @@ input::-webkit-inner-spin-button {
 
 .hold-together p:last-child{
     font-size: 10px;
-    margin-top: 5px!important;
 }
 
 .game-mode-button{
@@ -245,11 +255,12 @@ input::-webkit-inner-spin-button {
     color: white;
     background-color: #797979;
     font-family: 'Inter', sans-serif;
+    border: var(--black) solid 1px;
 }
 
 .game-mode-button[data-selected="true"]{
-    background-color: #E8E8E8;
-    color: #000;
+    background-color: var(--darker-white);
+    color: var(--black);
 }
 
 .game-hlasena-box{
@@ -263,10 +274,11 @@ input::-webkit-inner-spin-button {
     height: 25px;
     width: 50px;
     border-radius: 5px;
-    color: white;
-    background-color: #797979;
+    color: var(--white);
+    background-color: var(--light-gray);
     font-family: 'Inter', sans-serif;
     text-align: center;
+    border: var(--black) 1px solid;
 }
 
 .hold-checkbox{
@@ -294,11 +306,15 @@ input::-webkit-inner-spin-button {
 
 .game-check-span label::before{
     content: '';
-    border: 1px solid black;
+    border: 1px solid var(--black);
     background-color: #797979;
     width: 25px;
     height: 25px;
     border-radius: 5px;
+}
+
+.game-check-span-color label::before{
+    background-color: #FF341C;
 }
 
 .game-check-span label:hover::before, .game-check-span input[type="checkbox"]:hover + label::before{
@@ -314,12 +330,13 @@ input::-webkit-inner-spin-button {
     font-family: 'Inter', sans-serif;
     width: 120px;
     height: 40px;
-    background-color: #797979;
-    color: #FFF;
+    background-color: var(--light-gray);
+    color: var(--white);
     margin-top: 20px;
+    border: var(--black) solid 1px;
 }
 
 #calculate:hover{
-    background-color: #E8E8E8;
+    background-color: var(--darker-white);
     color: #000;
 }
