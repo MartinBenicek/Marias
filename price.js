@@ -31,8 +31,10 @@ class changeColor {
         this.button.addEventListener("click", () => {
             this.buttonToTurnOff.forEach(btn => {
                 btn.setAttribute("data-selected", "false");
-                if(btn.id !== "V-srdcich")
-                this.showFunctions(btn, 0);
+                if(btn.id !== "V-srdcich"){
+                    this.returnToNormalState(btn)
+                    this.showFunctions(btn, 0);
+                }
             });
             let getAttribute = this.button.getAttribute("data-selected");
             getAttribute = getAttribute === "true";
@@ -53,6 +55,22 @@ class changeColor {
         const buttonId = button.id + "-flek";
         const buttonFlek = document.getElementById(buttonId);
         buttonFlek.value = 0;
+    }
+
+    returnToNormalState(button){
+        const buttonId = button.id;
+        const buttonFlek = document.getElementById(buttonId + "-flek");
+        const buttonObrana = document.querySelector("#obrana-" + buttonId);
+        const buttonPovinnost = document.querySelector("#povinnost-" + buttonId);
+        buttonFlek.value = null;
+        buttonObrana.checked = false;
+        buttonPovinnost.checked = false;
+        try{
+            const buttonHlaseno = document.getElementById("hlaseno-" + buttonId);
+            buttonHlaseno.checked = false;
+        } catch (error){
+            return;
+        }
     }
 
     showFunctions(button, state){
@@ -106,8 +124,8 @@ function getData(){
     const kiloFlekData = document.querySelector("#Kilo-flek");
     const betlFlekData = document.querySelector("#Betl-flek");
     const durchFlekData = document.querySelector("#Durch-flek");
-    const hlasenaSedma = document.querySelector("#hlasena-sedma");
-    const hlaseneKilo = document.querySelector("#hlasene-kilo");
+    const hlasenaSedma = document.querySelector("#hlaseno-Sedma");
+    const hlaseneKilo = document.querySelector("#hlaseno-Kilo");
 
 
     let gameArray = [
@@ -139,6 +157,7 @@ function getData(){
 }
 
 function priceCalculation(data){
+    console.log(data);
     let povinnostPrice = 0;
     let obranaPrice = 0;
     for(let i = 0; i < data.length - 1; i++){

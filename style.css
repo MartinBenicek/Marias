@@ -263,7 +263,7 @@ input::-webkit-inner-spin-button {
     color: var(--black);
 }
 
-.game-hlasena-box{
+.game-hlaseno-box{
     height: 30px;
     width: 30px;
     cursor: pointer;
