@@ -340,3 +340,11 @@ input::-webkit-inner-spin-button {
     background-color: var(--darker-white);
     color: #000;
 }
+
+#price-output-text{
+    margin-top: 20px;
+}
+
+#price-output{
+    margin-left: 5px;
+}

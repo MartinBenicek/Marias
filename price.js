@@ -44,10 +44,7 @@ class changeColor {
                 return;
             }
             this.setZeroToFlek(this.button);
-            if(getAttribute === true)
-            this.showFunctions(this.button, 1);
-            else
-            this.showFunctions(this.button, 0);
+            getAttribute ? this.showFunctions(this.button, 1) : this.showFunctions(this.button, 0);
         });
     }
 
@@ -76,10 +73,7 @@ class changeColor {
     showFunctions(button, state){
         const buttonId = button.id + "-div-functions";
         const buttonDiv = document.getElementById(buttonId);
-        if(state === 1) 
-        buttonDiv.style.display = "grid";
-        else
-        buttonDiv.style.display = "none";
+        state ? buttonDiv.style.display = "grid" : buttonDiv.style.display = "none";
     }
 }
 
@@ -157,7 +151,6 @@ function getData(){
 }
 
 function priceCalculation(data){
-    console.log(data);
     let povinnostPrice = 0;
     let obranaPrice = 0;
     for(let i = 0; i < data.length - 1; i++){
@@ -176,17 +169,22 @@ function priceCalculation(data){
             obranaPrice += tmpPrice;
         }
     }
+    const priceOutput = document.querySelector("#price-output");
+    if (povinnostPrice === 0 && obranaPrice === 0){
+        priceOutput.value = "";
+        return;
+    }
     let finalPrice = povinnostPrice - obranaPrice;
     if(data[5].statusInfo === "true"){
         finalPrice = finalPrice * 2;
     }
     if(finalPrice > 0){
-        console.log("Povinnost dostává " + finalPrice + " od každého");
+       priceOutput.value = "Povinnost dostává " + finalPrice + " od každého";
     } else if (finalPrice === 0){
-        console.log("Je to remíza");
+        priceOutput.value = "Je to remíza";
     } else{
         finalPrice = finalPrice * (-1);
-        console.log("Povinnost dává " + finalPrice + " každému");
+        priceOutput.value = "Povinnost dává " + finalPrice + " každému";
     }
 }
 
